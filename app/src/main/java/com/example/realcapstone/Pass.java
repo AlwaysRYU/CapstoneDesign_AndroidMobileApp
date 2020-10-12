@@ -11,6 +11,7 @@ public class Pass extends AppCompatActivity {
 
 
     Button mainbtn;
+    Button enterinfobtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class Pass extends AppCompatActivity {
         setContentView(R.layout.activity_pass);
 
         mainbtn = (Button)findViewById(R.id.button2);
+        enterinfobtn = (Button)findViewById(R.id.button3);
 
 
         mainbtn.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +32,15 @@ public class Pass extends AppCompatActivity {
             }
         });
 
+        enterinfobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Intent intent = new Intent(Pass.this, Enterinfo.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

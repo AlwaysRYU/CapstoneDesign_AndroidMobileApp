@@ -10,6 +10,7 @@ import android.widget.Button;
 public class Fail extends AppCompatActivity {
 
     Button mainbtn;
+    Button enterinfobtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class Fail extends AppCompatActivity {
         setContentView(R.layout.activity_fail);
 
         mainbtn = (Button)findViewById(R.id.button2);
+        enterinfobtn = (Button)findViewById(R.id.button3);
 
 
         mainbtn.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +27,16 @@ public class Fail extends AppCompatActivity {
 
 
                 Intent intent = new Intent(Fail.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
+
+        enterinfobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Intent intent = new Intent(Fail.this, Enterinfo.class);
                 startActivity(intent);
             }
         });

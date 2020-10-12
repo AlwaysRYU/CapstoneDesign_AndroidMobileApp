@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 
 public class MainMenu extends AppCompatActivity {
     //선언
-    Button inputspecbtn;
+    Button mypagebtn;
     Button comparebtn;
     Button Interviewbtn;
 
@@ -34,16 +34,16 @@ public class MainMenu extends AppCompatActivity {
         temp1.setText(message);
 
         //선언해주기
-        inputspecbtn = (Button) findViewById(R.id.btn1);
+        mypagebtn = (Button) findViewById(R.id.btn1);
         comparebtn = (Button) findViewById(R.id.btn2);
         Interviewbtn = (Button)findViewById(R.id.btn3);
 
 
-        inputspecbtn.setOnClickListener(new View.OnClickListener() {
+        mypagebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //스펙 입력 버튼 클릭시
-                Intent intent = new Intent(MainMenu.this, InputSpec.class);
+                Intent intent = new Intent(MainMenu.this, Mypage.class);
                 intent.putExtra("loginID", myData);
                 //첫번째 인자는 STring타입의 키 / 두번째는 데이터
 

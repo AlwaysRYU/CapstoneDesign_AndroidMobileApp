@@ -118,12 +118,6 @@ public class CompareMenu extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
