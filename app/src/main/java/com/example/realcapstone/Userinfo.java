@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Userinfo extends AppCompatActivity {
@@ -18,6 +20,8 @@ public class Userinfo extends AppCompatActivity {
     int dbversion = 1;
     SQLiteDatabase db;
     Userinfo.DatabaseHelper handler;
+
+    Button mainbtn;
 
     //출력을 위한 변수 선언
     TextView a;
@@ -37,6 +41,19 @@ public class Userinfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userinfo);
+
+        mainbtn = (Button)findViewById(R.id.button2);
+
+        mainbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Intent intent = new Intent(Userinfo.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
+
 
         //값 할당
         TextView a = (TextView) findViewById(R.id.text1);
@@ -69,25 +86,25 @@ public class Userinfo extends AppCompatActivity {
         a.setText(aa);
         String bb = C1.getString(1);
         b.setText(bb);
-        int cc = C1.getInt(4);
+        String cc = C1.getString(4);
         c.setText(cc);
-        int dd = C1.getInt(5);
+        String dd = C1.getString(5);
         d.setText(dd);
-        int ee = C1.getInt(6);
+        String ee = C1.getString(6);
         e.setText(ee);
-        int ff = C1.getInt(7);
+        String ff = C1.getString(7);
         f.setText(ff);
-        int gg = C1.getInt(8);
+        String gg = C1.getString(8);
         g.setText(gg);
-        int hh = C1.getInt(9);
+        String hh = C1.getString(9);
         h.setText(hh);
-        int ii = C1.getInt(10);
+        String ii = C1.getString(10);
         i.setText(ii);
-        int jj = C1.getInt(11);
+        String jj = C1.getString(11);
         j.setText(jj);
-        int kk = C1.getInt(12);
+        String kk = C1.getString(12);
         k.setText(kk);
-        int ll = C1.getInt(13);
+        String ll = C1.getString(13);
         l.setText(ll);
 
     }

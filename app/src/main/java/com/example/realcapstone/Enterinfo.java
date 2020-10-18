@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Enterinfo extends AppCompatActivity {
@@ -18,6 +20,8 @@ public class Enterinfo extends AppCompatActivity {
     int dbversion = 1;
     SQLiteDatabase db;
     Enterinfo.DatabaseHelper handler;
+
+    Button mainbtn;
 
     //출력을 위한 변수 선언
     TextView a1;
@@ -36,6 +40,18 @@ public class Enterinfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enterinfo);
+
+        mainbtn = (Button)findViewById(R.id.button2);
+
+        mainbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Intent intent = new Intent(Enterinfo.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
 
         //값 할당
         TextView a1 = (TextView) findViewById(R.id.text1);
@@ -65,25 +81,25 @@ public class Enterinfo extends AppCompatActivity {
 
         String aa1 = C2.getString(1);
         a1.setText(aa1);
-        int a22 = C2.getInt(4);
+        String a22 = C2.getString(4);
         a2.setText(a22);
-        int a33 = C2.getInt(5);
+        String a33 = C2.getString(5);
         a3.setText(a33);
-        int a44 = C2.getInt(6);
+        String a44 = C2.getString(6);
         a4.setText(a44);
-        int a55 = C2.getInt(7);
+        String a55 = C2.getString(7);
         a5.setText(a55);
-        int a66 = C2.getInt(8);
+        String a66 = C2.getString(8);
         a6.setText(a66);
-        int a77 = C2.getInt(9);
+        String a77 = C2.getString(9);
         a7.setText(a77);
-        int a88 = C2.getInt(10);
+        String a88 = C2.getString(10);
         a8.setText(a88);
-        int a99 = C2.getInt(11);
+        String a99 = C2.getString(11);
         a9.setText(a99);
-        int a1010 = C2.getInt(12);
+        String a1010 = C2.getString(12);
         a10.setText(a1010);
-        int a1111 = C2.getInt(13);
+        String a1111 = C2.getString(13);
         a11.setText(a1111);
 
     }
