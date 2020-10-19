@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:background="@drawable/bg_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CompareMenu">
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="663dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,24 +23,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/tvnb"
                     android:text="채용"
-                    android:textColor="#000000"
-                    android:textSize="30sp"></TextView>
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"/>
 
             </RelativeLayout>
 
             <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="614dp"
+                android:layout_height="wrap_content"
                 android:alignmentMode="alignMargins"
-                android:columnCount="2"
                 android:columnOrderPreserved="false"
+                android:columnCount="2"
                 android:rowCount="3">
 
-
                 <androidx.cardview.widget.CardView
-                    android:layout_width="112dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -102,9 +89,9 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:id="@+id/number2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
+                            android:id="@+id/number2"
                             android:src="@drawable/logo2_hyundai" />
 
                         <TextView
@@ -139,6 +126,7 @@
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
+                            android:id="@+id/number3"
                             android:src="@drawable/apple" />
 
                         <TextView
@@ -173,6 +161,7 @@
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
+                            android:id="@+id/number4"
                             android:src="@drawable/logo3_netmarble" />
 
                         <TextView
@@ -207,6 +196,7 @@
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
+                            android:id="@+id/number5"
                             android:src="@drawable/mcdonald" />
 
                         <TextView
@@ -222,21 +212,148 @@
 
                 </androidx.cardview.widget.CardView>
 
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:id="@+id/number6"
+                            android:src="@drawable/gs" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/tvnm"
+                            android:text="GS리테일"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="86dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/number7"
+                            android:src="@drawable/kb" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/tvnm"
+                            android:text="KB국민은행"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="86dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/number8"
+                            android:src="@drawable/ibk" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/tvnm"
+                            android:text="기업은행"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/number9"
+                            android:layout_width="86dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/h_well" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/tvnm"
+                            android:text="건강보험공단"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </GridLayout>
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/nextbtn"
-        android:layout_width="178dp"
-        android:layout_height="55dp"
-        android:text="다음"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
