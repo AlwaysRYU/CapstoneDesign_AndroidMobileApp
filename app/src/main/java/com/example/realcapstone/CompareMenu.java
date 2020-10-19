@@ -72,11 +72,13 @@ public class CompareMenu extends AppCompatActivity {
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("compareID",1);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("compareID",1);
                     startActivity(intent);
                 }
 
@@ -105,11 +107,13 @@ public class CompareMenu extends AppCompatActivity {
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("compareID",2);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("compareID",2);
                     startActivity(intent);
                 }
 

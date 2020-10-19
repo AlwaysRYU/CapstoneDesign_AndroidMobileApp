@@ -46,8 +46,6 @@ public class Enterinfo extends AppCompatActivity {
         mainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 Intent intent = new Intent(Enterinfo.this, MainMenu.class);
                 startActivity(intent);
             }
@@ -70,10 +68,12 @@ public class Enterinfo extends AppCompatActivity {
         Intent intent = getIntent();
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
+        //enterID는 기업 이다.
+        final String enterID = intent.getStringExtra("compareID");
 
         databaseOpen(true);
 
-        String sql2 = "SELECT * FROM Enterprise WHERE Id = '" + myData + "';";
+        String sql2 = "SELECT * FROM Enterprise WHERE cId = enterID;";
 
         Cursor C2 = db.rawQuery(sql2,null);
 

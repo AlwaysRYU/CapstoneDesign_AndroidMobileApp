@@ -21,11 +21,13 @@ public class Pass extends AppCompatActivity {
         mainbtn = (Button)findViewById(R.id.button2);
         enterinfobtn = (Button)findViewById(R.id.button3);
 
+        Intent intent = getIntent();
+        //myData는 아이디 이다.
+        final String enterID = intent.getStringExtra("compareID");
 
         mainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 Intent intent = new Intent(Pass.this, MainMenu.class);
                 startActivity(intent);
@@ -36,8 +38,8 @@ public class Pass extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 Intent intent = new Intent(Pass.this, Enterinfo.class);
+                intent.putExtra("compareID",enterID);
                 startActivity(intent);
             }
         });
