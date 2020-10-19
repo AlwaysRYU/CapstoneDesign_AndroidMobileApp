@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CompareMenu2"></activity>
+        <activity android:name=".Enterinfo"></activity>
+        <activity android:name=".Userinfo" />
+        <activity android:name=".Mypage" />
+        <activity android:name=".CompareMenu2" />
         <activity android:name=".InterviewMenu" />
         <activity android:name=".Fail" />
         <activity android:name=".Pass" />

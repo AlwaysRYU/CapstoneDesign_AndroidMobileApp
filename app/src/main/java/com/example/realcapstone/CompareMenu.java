@@ -36,6 +36,7 @@ public class CompareMenu extends AppCompatActivity {
     //선언
     boolean pass = true; // 합격
     TextView Tv;
+    Button nextpage;
     EditText id;
     EditText pw;
     EditText Name;
@@ -48,6 +49,9 @@ public class CompareMenu extends AppCompatActivity {
 
 
         number1 = (ImageView) findViewById(R.id.number1);
+        number2 = (ImageView) findViewById(R.id.number2);
+
+        nextpage = (Button)findViewById(R.id.nextbtn);
 
 
         Intent intent = getIntent();
@@ -121,70 +125,20 @@ public class CompareMenu extends AppCompatActivity {
         });
 
 
-        number3.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+
+        nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                databaseOpen(true);
-
-                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
-
-                Cursor C1 = db.rawQuery(sql1,null);
-                Cursor C2 = db.rawQuery(sql2, null);
-                C1.moveToNext();
-                C2.moveToNext();
-
-                int userP = C1.getInt(0);
-                int EnterP = C2.getInt(0);
-
-
-                if (userP >= EnterP ) {
-                    //합격시
-                    Intent intent = new Intent(CompareMenu.this, Pass.class);
-                    startActivity(intent);
-
-                }else if (userP < EnterP) {
-                    //불합격시
-                    Intent intent = new Intent(CompareMenu.this, Fail.class);
-                    startActivity(intent);
-                }
-
+                Intent intent = new Intent(CompareMenu.this, CompareMenu2.class);
+                startActivity(intent);
 
             }
         });
-
-        number4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                databaseOpen(true);
-
-                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
-
-                Cursor C1 = db.rawQuery(sql1,null);
-                Cursor C2 = db.rawQuery(sql2, null);
-                C1.moveToNext();
-                C2.moveToNext();
-
-                int userP = C1.getInt(0);
-                int EnterP = C2.getInt(0);
-
-
-                if (userP >= EnterP ) {
-                    //합격시
-                    Intent intent = new Intent(CompareMenu.this, Pass.class);
-                    startActivity(intent);
-
-                }else if (userP < EnterP) {
-                    //불합격시
-                    Intent intent = new Intent(CompareMenu.this, Fail.class);
-                    startActivity(intent);
-                }
-
-
-            }
-        });
-
     }
 
 
@@ -206,7 +160,7 @@ public class CompareMenu extends AppCompatActivity {
         public void onOpen(SQLiteDatabase db) { super.onOpen(db); }
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            Log.w("upgrade", "업그레이드했습니다. " + oldVersion + "to " +newVersion + ",");
+            Log.w("upgrade", "업그레이드했스비다. " + oldVersion + "to " +newVersion + ",");
         }
     }
     //여기까지는 해줘라

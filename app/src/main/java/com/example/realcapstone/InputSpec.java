@@ -60,9 +60,6 @@ public class InputSpec extends AppCompatActivity {
         Foreignt = (EditText)findViewById(R.id.in3);
 
 
-
-
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
