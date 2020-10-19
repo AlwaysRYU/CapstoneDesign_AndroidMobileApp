@@ -25,6 +25,13 @@ public class CompareMenu extends AppCompatActivity {
 
     ImageView number1;
     ImageView number2;
+    ImageView number3;
+    ImageView number4;
+    ImageView number5;
+    ImageView number6;
+    ImageView number7;
+    ImageView number8;
+    ImageView number9;
 
     //선언
     boolean pass = true; // 합격
@@ -120,6 +127,12 @@ public class CompareMenu extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
 
 
         nextpage.setOnClickListener(new View.OnClickListener() {

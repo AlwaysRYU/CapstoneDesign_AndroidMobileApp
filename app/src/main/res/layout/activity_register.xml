@@ -10,15 +10,15 @@
         android:id="@+id/IDtext"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/blank"
         android:ems="10"
         android:hint="아이디"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textSize="12sp"
-        android:background="@drawable/blank"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

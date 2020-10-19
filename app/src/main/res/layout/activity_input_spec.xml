@@ -128,7 +128,7 @@
         android:id="@+id/in3"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="270dp"
         android:background="@drawable/blank"
         android:ems="10"
         android:hint="외국어관련 자격증 개수 입력"
@@ -156,7 +156,7 @@
         android:id="@+id/inputcomplete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="70dp"
         android:text="다음"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,7 +172,7 @@
         app:layout_constraintHorizontal_bias="0.707"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697">
+        app:layout_constraintVertical_bias="0.625">
 
         <RadioButton
             android:id="@+id/radio0"
