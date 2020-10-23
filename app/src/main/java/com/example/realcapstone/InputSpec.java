@@ -45,7 +45,9 @@ public class InputSpec extends AppCompatActivity {
         Intent intent = getIntent();
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
-        String message = myData + "님! 당신의 스펙을 입력하세요.";
+        final String myName = intent.getStringExtra("loginName");
+
+        String message = myName + "님! 당신의 스펙을 입력하세요.";
         TextView temp1;
         temp1 = (TextView) findViewById(R.id.tv6);
         //값 매칭
@@ -64,14 +66,81 @@ public class InputSpec extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 databaseOpen(true);
+
+                double tempScore = 0; //넘겨줄 스펙 스코어
+                if(Toeict.length() == 0 ||
+                        Gpointt.length() == 0 ||
+                        Toeicst.length() == 0 ||
+                        Foreignt.length() == 0){
+                    Toast toast = Toast.makeText(InputSpec.this, "입력하지 않은 항목이 있습니다.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
+
                 //받아온 텍스트
                 //받아온 텍스트
                 double GP = Double.parseDouble(Gpointt.getText().toString());
+                double tempGP = 0;
+                //학점의 범위에 따라
+                if(GP == 4.5 ){
+                    tempGP = 110;
+                } else if ((4 <= GP) && (GP < 4.5)){
+                    tempGP = 100;
+                } else if ((3.5 <= GP) && (GP < 4)){
+                    tempGP = 50;
+                } else if ((2 <= GP) && (GP < 3.5)){
+                    tempGP = 0;
+                } else if ((0 <= GP) && (GP < 2)) {
+                    tempGP = -30;
+                } else {
+                    Toast toast = Toast.makeText(InputSpec.this, "학점은 0 ~ 4.5의 범위안에서 입력해주세요", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
+
                 double TP = Double.parseDouble(Toeict.getText().toString());
+                double tempTP = 0;
+                //토익의 범위에 따라
+                if(TP == 990 ){
+                    tempTP = 120;
+                } else if ((900 <= TP) && (TP < 990)){
+                    tempTP = 100;
+                } else if ((850 <= TP) && (TP < 900)) {
+                    tempTP = 90;
+                } else if ((750 <= TP) && (TP < 850)){
+                    tempTP = 80;
+                } else if ((0 <= TP) && (TP < 750)) {
+                    tempTP = (TP * 0.1);
+                } else {
+                    Toast toast = Toast.makeText(InputSpec.this, "토익은  0 ~ 990의 범위안에서 입력해주세요", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
+
                 double TSP = Double.parseDouble(Toeicst.getText().toString());
+                double tempTSP = 0;
+                //토익스피킹의 범위
+                if(TSP == 8 ){
+                    tempTSP = 120;
+                } else if (TSP == 7){
+                    tempTSP = 100;
+                } else if (TSP == 6 ) {
+                    tempTSP = 70;
+                } else if (TSP == 5) {
+                    tempTSP = 50;
+                } else if (( 0 <= TSP ) && (TSP <=4)) {
+                    tempTSP = 0;
+                } else {
+                    Toast toast = Toast.makeText(InputSpec.this, "1부터 8까지의 레벨로 입력 해주세요.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
+
                 double FP = Double.parseDouble(Foreignt.getText().toString());
+                double tempFP = (FP * 40); //언어자격증
 
                 double OpicP = 6;
+                double tempOpicP = 0;
                 //getCheckedRadioButtonId() 의 리턴값은 선택된 RadioButton 의 id 값.
                 //이부분 수정 필요
                 int temp = Opict.getCheckedRadioButtonId();
@@ -81,14 +150,46 @@ public class InputSpec extends AppCompatActivity {
                 //수정완료 이거하느라 이틀고민했네짱나
                 if("Advanced Low".equals(temp2)) {
                     OpicP = 5;
-                }else if ("IH - IM3".equals(temp2)) {
+                    tempOpicP = 95;
+                }else if ("IH".equals(temp2)) {
                     OpicP = 4;
-                }else if ("IM2 - IM1".equals(temp2)) {
+                    tempOpicP = 85;
+                }else if ("IM3".equals(temp2)) {
                     OpicP = 3;
-                }else if ("IL".equals(temp2)){
+                    tempOpicP = 65;
+                }else if ("IM2".equals(temp2)){
                     OpicP = 2;
-                }else if ("NH 이하".equals(temp2)) {
+                    tempOpicP = 50;
+                }else if ("IM1 이하".equals(temp2)) {
                     OpicP = 1;
+                    tempOpicP = 20;
+                }
+
+                if (tempTP >= tempTSP ){
+                    //토익이 제일 클경우
+                    if (tempTSP >= tempOpicP){
+                        tempScore = tempGP + tempFP + tempTP + (tempTSP * 0.8) + (tempOpicP * 0.8);
+                    } else if ( tempTP >= tempOpicP ) {
+                        tempScore = tempGP + tempFP + tempTP + (tempTSP * 0.8) + (tempOpicP * 0.8);
+                    }
+                }
+
+                if (tempTSP >= tempTP ){
+                    //토스가 제일 클경우
+                    if (tempTP >= tempOpicP){
+                        tempScore = tempGP + tempFP + tempTSP + (tempOpicP * 0.8) + (tempTP * 0.8);
+                    } else if ( tempTSP >= tempOpicP ) {
+                        tempScore = tempGP + tempFP + tempTSP + (tempOpicP * 0.8) + (tempTP * 0.8);
+                    }
+                }
+
+                if (tempOpicP >= tempTP ){
+                    //오픽이제일 클경우
+                    if (tempTP >= tempTSP){
+                        tempScore = tempGP + tempFP + tempOpicP + (tempTSP * 0.8) + (tempTP * 0.8);
+                    } else if ( tempOpicP >= tempTSP ) {
+                        tempScore = tempGP + tempFP + tempOpicP + (tempTSP * 0.8) + (tempTP * 0.8);
+                    }
                 }
 
                 sql = "UPDATE User " +
@@ -106,7 +207,9 @@ public class InputSpec extends AppCompatActivity {
                     toast.show();
 
                     Intent intent = new Intent(getApplicationContext(), InputSpec2.class);
-                    intent.putExtra("loginID", myData);
+                    intent.putExtra("loginID", myData); // user아이디
+                    intent.putExtra("loginName",myName);
+                    intent.putExtra("SpecScore", tempScore);
                     startActivity(intent);
 
                 }

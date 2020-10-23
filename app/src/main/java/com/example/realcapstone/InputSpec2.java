@@ -25,6 +25,7 @@ public class InputSpec2 extends AppCompatActivity {
     SQLiteDatabase db;
     InputSpec2.DatabaseHelper handler;
 
+
     //선언
     Button next;
     EditText Licenset;
@@ -44,6 +45,8 @@ public class InputSpec2 extends AppCompatActivity {
         Intent intent = getIntent();
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
+        final String myName = intent.getStringExtra("loginName");
+        final double realspecscore = intent.getExtras().getDouble("SpecScore");
         String message = myData + "님! 부가적인 스펙을 입력하세요.";
         TextView temp1;
         temp1 = (TextView) findViewById(R.id.inputspec2_tv2);
@@ -62,18 +65,41 @@ public class InputSpec2 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(Licenset.length() == 0 ||
+                        Abroadt.length() == 0 ||
+                        Internt.length() == 0 ||
+                        Awardst.length() == 0 ||
+                        Schoolt.length() == 0 ){
+                    Toast toast = Toast.makeText(InputSpec2.this, "입력하지 않은 항목이 있습니다.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
                 databaseOpen(true);
                 //받아온 텍스트
                 //받아온 텍스트
-                double LicenseP = Double.parseDouble(Licenset.getText().toString());
-                double AbroadP = Double.parseDouble(Abroadt.getText().toString());
-                double InternP = Double.parseDouble(Internt.getText().toString());
-                double AwardP = Double.parseDouble(Awardst.getText().toString());
-                double VP = Double.parseDouble(Schoolt.getText().toString());
 
+                double LicenseP = Double.parseDouble(Licenset.getText().toString());
+                double tempLP = LicenseP * 50;
+
+                double AbroadP = Double.parseDouble(Abroadt.getText().toString());
+                double tempAbroadP = AbroadP * 90;
+
+                double InternP = Double.parseDouble(Internt.getText().toString());
+                double tempInternP = InternP * 120;
+
+                double AwardP = Double.parseDouble(Awardst.getText().toString());
+                double tempAwardP = AwardP * 110;
+
+                double VP = Double.parseDouble(Schoolt.getText().toString());
+                double tempVP = VP * 60;
+
+                double REALSC = 0;
+                REALSC = realspecscore + tempLP + tempAbroadP + tempInternP + tempAwardP + tempVP;
 
                 sql = "UPDATE User " +
                         "SET " +
+                        "Specscore = " + REALSC + "," +
                         "License =" + LicenseP + "," +
                         "Abroad =" +   AbroadP + "," +
                         "Intern =" + InternP + "," +
@@ -89,6 +115,7 @@ public class InputSpec2 extends AppCompatActivity {
 
                     Intent intent = new Intent(getApplicationContext(), MainMenu.class);
                     intent.putExtra("loginID", myData);
+                    intent.putExtra("loginName",myName);
                     startActivity(intent);
                     finish();
                 }

@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     Cursor C;
 
+    //로그인 화면입니다.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,9 +82,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(MainActivity.this, "환영합니다!", Toast.LENGTH_SHORT);
                     toast.show();
 
+                    String sql2 = "SELECT Name FROM User WHERE ID = '" + idt + "'";
+                    Cursor C2 = db.rawQuery(sql2, null);
+                    C2.moveToNext();
+                    String name = C2.getString(0);
 
                     Intent intent = new Intent(getApplicationContext(),MainMenu.class);
-                    intent.putExtra("loginID", idt);
+                    intent.putExtra("loginID", idt); //유저의 아이디
+                    intent.putExtra("loginName", name); //유저의 이름
                     //첫번째 인자는 STring타입의 키 / 두번째는 데이터
                     startActivityForResult(intent,0);
                     finish();

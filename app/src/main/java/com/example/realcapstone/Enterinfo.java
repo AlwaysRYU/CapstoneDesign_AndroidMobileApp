@@ -41,12 +41,20 @@ public class Enterinfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enterinfo);
 
+        Intent intent = getIntent();
+        //myData는 아이디 이다.
+        final String myData = intent.getStringExtra("loginID");
+        final String myName = intent.getStringExtra("loginName");
+        final int enterprisenumber = intent.getExtras().getInt("Enterprise");
+
         mainbtn = (Button)findViewById(R.id.button2);
 
         mainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Enterinfo.this, MainMenu.class);
+                intent.putExtra("loginID",myData);
+                intent.putExtra("loginName", myName);
                 startActivity(intent);
             }
         });
@@ -64,23 +72,23 @@ public class Enterinfo extends AppCompatActivity {
         TextView a10 = (TextView) findViewById(R.id.text11);
         TextView a11 = (TextView) findViewById(R.id.text12);
 
-        //intent값 전달받기
-        Intent intent = getIntent();
-        //myData는 아이디 이다.
-        final String myData = intent.getStringExtra("loginID");
-        //enterID는 기업 이다.
-        final String enterID = intent.getStringExtra("compareID");
 
         databaseOpen(true);
 
-        String sql2 = "SELECT * FROM Enterprise WHERE cId = enterID;";
-
+        //기업이 요구하는 것
+        String sql2 = "SELECT * FROM Enterprise WHERE cId = " + enterprisenumber + ";";
         Cursor C2 = db.rawQuery(sql2,null);
-
         C2.moveToNext();
 
+        //사용자의 스펙
+        String sql3  ="SELECT * FROM User WHERE Id = '" + myData + "';";
+        Cursor C3 = db.rawQuery(sql3,null);
+        C3.moveToNext();
+
+        //기업의 이름
         String aa1 = C2.getString(1);
         a1.setText(aa1);
+
         String a22 = C2.getString(4);
         a2.setText(a22);
         String a33 = C2.getString(5);

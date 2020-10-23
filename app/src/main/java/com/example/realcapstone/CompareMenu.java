@@ -51,12 +51,15 @@ public class CompareMenu extends AppCompatActivity {
         number1 = (ImageView) findViewById(R.id.number1);
         number2 = (ImageView) findViewById(R.id.number2);
 
-        nextpage = (Button)findViewById(R.id.nextbtn);
 
 
+        //intent에서 값 받아오기
         Intent intent = getIntent();
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
+        final String myName = intent.getStringExtra("loginName");
+
+
 
 
         number1.setOnClickListener(new View.OnClickListener() {
@@ -79,13 +82,17 @@ public class CompareMenu extends AppCompatActivity {
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu.this, Pass.class);
-                    intent.putExtra("compareID",1);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 1);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu.this, Fail.class);
-                    intent.putExtra("compareID",1);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise",1);
                     startActivity(intent);
                 }
 
@@ -114,13 +121,17 @@ public class CompareMenu extends AppCompatActivity {
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu.this, Pass.class);
-                    intent.putExtra("compareID",2);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu.this, Fail.class);
-                    intent.putExtra("compareID",2);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
                     startActivity(intent);
                 }
 
@@ -135,14 +146,15 @@ public class CompareMenu extends AppCompatActivity {
 
 
 
-        nextpage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CompareMenu.this, CompareMenu2.class);
-                startActivity(intent);
-
-            }
-        });
+//        nextpage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(CompareMenu.this, CompareMenu2.class);
+//                intent.putExtra("loginID", myData);
+//                startActivity(intent);
+//
+//            }
+//        });
     }
 
 

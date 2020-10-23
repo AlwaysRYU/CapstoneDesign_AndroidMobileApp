@@ -4,68 +4,94 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class Mypage extends AppCompatActivity {
+public class Interview_Fail extends AppCompatActivity {
     //기본으로는
     String databasename = "capstone.db";
     String sql = "";
     int dbversion = 1;
     SQLiteDatabase db;
-    Mypage.DatabaseHelper handler;
+    Interview_Fail.DatabaseHelper handler;
 
-    Button inputspecbtn;
-    Button userinfobtn;
+    //
+    String explain;
+    TextView explainTV;
+    Button again;
+    Button mainmenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mypage);
+        setContentView(R.layout.activity_interview__fail);
+
+        //db오픈
+        databaseOpen(true);
+        //
+        explainTV = (TextView)findViewById(R.id.tv9);
+        again = (Button)findViewById(R.id.againbtn);
+        mainmenu = (Button)findViewById(R.id.mainbtn);
+
 
         //intent값 전달받기
         Intent intent = getIntent();
+        //문제 넘버 받기
+        final int questNumberr = intent.getIntExtra("questnumber",1);
         //myData는 아이디 이다.
-        final String myData = intent.getStringExtra("loginID");
         final String myName = intent.getStringExtra("loginName");
-
-        inputspecbtn = (Button) findViewById(R.id.btn1);
-        userinfobtn = (Button) findViewById(R.id.btn2);
+        final String myData = intent.getStringExtra("loginID");
 
 
-        inputspecbtn.setOnClickListener(new View.OnClickListener() {
+
+        //문제
+        sql = "SELECT * FROM Interview WHERE id = " + questNumberr +";";
+        final Cursor C1 = db.rawQuery(sql,null);
+        C1.moveToNext();
+        explain = C1.getString(6);
+
+        explainTV.setText(explain);
+
+
+        again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //스펙 수정 버튼 클릭시
-                Intent intent = new Intent(Mypage.this, InputSpec.class);
-                intent.putExtra("loginID", myData);
-                //첫번째 인자는 STring타입의 키 / 두번째는 데이터
-                intent.putExtra("loginName",myName);
 
+                Intent intent = new Intent(getApplicationContext(), Interview.class);
+
+                intent.putExtra("loginID", myData);
+                intent.putExtra("loginName",myName);
                 startActivity(intent);
+
             }
         });
 
-        userinfobtn.setOnClickListener(new View.OnClickListener() {
+        mainmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //사용자 정보 입력 버튼 클릭시
-                Intent intent = new Intent(Mypage.this, Userinfo.class);
+
+                Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+
                 intent.putExtra("loginID", myData);
-                //첫번째 인자는 STring타입의 키 / 두번째는 데이터
                 intent.putExtra("loginName",myName);
                 startActivity(intent);
+
             }
         });
+
+
     }
+
 
     //기본으로 해줘야할 것
     private void databaseOpen(boolean f){
-        handler = new Mypage.DatabaseHelper(this);
+        handler = new Interview_Fail.DatabaseHelper(this);
         if(f==false) {db = handler.getReadableDatabase();}
         else{db=handler.getWritableDatabase();}
     }

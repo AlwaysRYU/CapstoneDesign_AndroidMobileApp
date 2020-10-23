@@ -50,6 +50,7 @@ public class Userinfo extends AppCompatActivity {
 
 
                 Intent intent = new Intent(Userinfo.this, MainMenu.class);
+
                 startActivity(intent);
             }
         });

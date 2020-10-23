@@ -26,8 +26,9 @@ public class MainMenu extends AppCompatActivity {
         Intent intent = getIntent();
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
+        final String myName = intent.getStringExtra("loginName");
 
-        String message = "반갑습니다. " + myData + "님!";
+        String message = "반갑습니다. " + myName + "님!";
         TextView temp1;
         temp1 = (TextView) findViewById(R.id.tv5);
         //값 매칭
@@ -45,6 +46,8 @@ public class MainMenu extends AppCompatActivity {
                 //스펙 입력 버튼 클릭시
                 Intent intent = new Intent(MainMenu.this, Mypage.class);
                 intent.putExtra("loginID", myData);
+                intent.putExtra("loginName", myName); //유저의 이름
+
                 //첫번째 인자는 STring타입의 키 / 두번째는 데이터
 
                 startActivity(intent);
@@ -56,6 +59,8 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainMenu.this, CompareMenu.class);
                 intent.putExtra("loginID", myData);
+                intent.putExtra("loginName", myName); //유저의 이름
+
                 startActivity(intent);
             }
         });
@@ -65,6 +70,8 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainMenu.this, InterviewMenu.class);
                 intent.putExtra("loginID", myData);
+                intent.putExtra("loginName", myName); //유저의 이름
+
                 startActivity(intent);
             }
         });
