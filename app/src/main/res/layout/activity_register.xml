@@ -4,13 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Register">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:background="@drawable/dolphin2"/>
 
     <EditText
         android:id="@+id/IDtext"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/blank"
         android:ems="10"
         android:hint="아이디"
@@ -20,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/in1"
@@ -58,28 +70,13 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="200dp"
         android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/bg_rgbutton_custom"
         android:text="확인"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="회원가입"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintTop_toBottomOf="@+id/in2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

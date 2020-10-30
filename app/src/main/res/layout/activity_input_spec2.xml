@@ -4,18 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".InputSpec2">
-
-    <TextView
-        android:id="@+id/inputspec2_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="부가적인 스펙입력화면 "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
 
     <TextView
         android:id="@+id/inputspec2_tv2"
@@ -31,168 +21,157 @@
         android:id="@+id/inputspec2_tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="수상 횟수"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
+        app:layout_constraintTop_toBottomOf="@+id/inputspec2_tv4" />
 
     <TextView
         android:id="@+id/inputspec2_tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="인턴 경험 횟수"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintTop_toBottomOf="@+id/inputspec2_tv5" />
 
     <TextView
         android:id="@+id/inputspec2_tv5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="해외 경험 횟수"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42" />
+        app:layout_constraintTop_toBottomOf="@+id/tv7" />
 
     <EditText
         android:id="@+id/in1"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="210dp"
         android:background="@drawable/blank"
         android:ems="10"
         android:hint="그 외 자격증을 입력하세요."
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintStart_toEndOf="@+id/tv7"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/in2"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/blank"
         android:ems="10"
         android:hint="해외활동 경험(3개월 이상)"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toEndOf="@+id/inputspec2_tv5"
+        app:layout_constraintTop_toBottomOf="@+id/in1" />
 
     <EditText
         android:id="@+id/in3"
         android:layout_width="200dp"
         android:layout_height="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/blank"
         android:ems="10"
         android:hint="인턴 경험 횟수"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:textSize="12sp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintTop_toBottomOf="@+id/in2" />
 
     <EditText
         android:id="@+id/in4"
         android:layout_width="200dp"
         android:layout_height="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/blank"
         android:ems="10"
         android:hint="각종 대회, 수상 횟수"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:textSize="12sp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintTop_toBottomOf="@+id/in3" />
 
     <EditText
         android:id="@+id/in5"
         android:layout_width="200dp"
         android:layout_height="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/blank"
         android:ems="10"
         android:hint="교내, 사회 봉사 횟수"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:textSize="12sp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.756" />
+        app:layout_constraintTop_toBottomOf="@+id/in4" />
 
     <TextView
         android:id="@+id/tv7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="215dp"
         android:text="자격증 개수"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.304" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="봉사활동"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintTop_toBottomOf="@+id/inputspec2_tv3" />
 
     <Button
         android:id="@+id/inputcomplete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_lgbutton_custom"
         android:text="스펙입력완료"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintTop_toBottomOf="@+id/in5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

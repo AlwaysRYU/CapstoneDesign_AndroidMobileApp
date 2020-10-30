@@ -23,9 +23,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/tvnb"
                     android:text="채용"
                     android:textColor="#FFFFFF"
-                    android:textSize="30sp"/>
+                    android:textSize="40sp"/>
 
             </RelativeLayout>
 
@@ -55,15 +56,15 @@
 
                         <ImageView
                             android:id="@+id/number1"
-                            android:layout_width="86dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:src="@drawable/logo1_train" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
+                            android:fontFamily="@font/scd2"
                             android:text="국가철도공단"
                             android:textColor="#000000"
                             android:textSize="18sp" />
@@ -89,8 +90,8 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:id="@+id/number2"
                             android:src="@drawable/logo2_hyundai" />
 
@@ -98,10 +99,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
+                            android:fontFamily="@font/scd2"
                             android:text="현대자동차"
                             android:textColor="#000000"
-                            android:textSize="15sp" />
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 
@@ -124,19 +125,19 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:id="@+id/number3"
-                            android:src="@drawable/apple" />
+                            android:src="@drawable/logo3_sktelecom" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
-                            android:text="애플"
+                            android:fontFamily="@font/scd2"
+                            android:text="SK텔레콤"
                             android:textColor="#000000"
-                            android:textSize="15sp" />
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 
@@ -159,16 +160,16 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:id="@+id/number4"
-                            android:src="@drawable/logo3_netmarble" />
+                            android:src="@drawable/logo4_netmarble" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
+                            android:fontFamily="@font/scd2"
                             android:text="넷마블"
                             android:textColor="#000000"
                             android:textSize="18sp" />
@@ -194,17 +195,17 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:id="@+id/number5"
-                            android:src="@drawable/mcdonald" />
+                            android:src="@drawable/logo5_cj" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
-                            android:text="맥도날드"
+                            android:fontFamily="@font/scd2"
+                            android:text="CJ"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -230,17 +231,17 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:id="@+id/number6"
-                            android:src="@drawable/gs" />
+                            android:src="@drawable/logo6_lotte" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
-                            android:text="GS리테일"
+                            android:fontFamily="@font/scd2"
+                            android:text="롯데 케미칼"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -265,16 +266,16 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:layout_width="86dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:id="@+id/number7"
-                            android:src="@drawable/kb" />
+                            android:src="@drawable/logo7_kb" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
+                            android:fontFamily="@font/scd2"
                             android:text="KB국민은행"
                             android:textColor="#000000"
                             android:textSize="18sp" />
@@ -300,16 +301,16 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:layout_width="86dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
                             android:id="@+id/number8"
-                            android:src="@drawable/ibk" />
+                            android:src="@drawable/logo8_ibk" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
+                            android:fontFamily="@font/scd2"
                             android:text="기업은행"
                             android:textColor="#000000"
                             android:textSize="18sp" />
@@ -336,16 +337,16 @@
 
                         <ImageView
                             android:id="@+id/number9"
-                            android:layout_width="86dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/h_well" />
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:src="@drawable/logo9_samsung" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/tvnm"
-                            android:text="건강보험공단"
+                            android:fontFamily="@font/scd2"
+                            android:text="삼성전자"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 

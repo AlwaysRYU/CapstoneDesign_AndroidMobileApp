@@ -4,28 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/line"
     tools:context=".Enterinfo">
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/scd6"
         android:text="기업 화면"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="430dp"
+        android:background="@drawable/bg_lgbutton_custom"
         android:text="메인화면으로"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv" />
 
     <TextView
         android:id="@+id/tv0"
@@ -41,11 +48,12 @@
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        android:text="[ 기업 이름 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="220dp"
+        android:text="기업 이름"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,138 +61,148 @@
         android:id="@+id/tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:text="[ 학점 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:text="학점 "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
     <TextView
         android:id="@+id/tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
-        android:text="[ TOEIC 점수 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="TOEIC 점수"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv3" />
 
     <TextView
         android:id="@+id/tv5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
-        android:text="[ 토익 스피킹 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="토익 스피킹"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv4" />
 
     <TextView
         android:id="@+id/tv6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
-        android:text="[ OPIc ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="OPIc"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv5" />
 
     <TextView
         android:id="@+id/tv7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="352dp"
-        android:text="[ 그외 언어 자격증 ] "
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="그외 언어 자격증"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv6" />
 
     <TextView
         android:id="@+id/tv8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
-        android:text="[ 해외경험 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="해외경험"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv7" />
 
     <TextView
         android:id="@+id/tv9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="444dp"
-        android:text="[ 수상횟수 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="수상횟수"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv8" />
 
     <TextView
         android:id="@+id/tv10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="492dp"
-        android:text="[ 인턴 경험 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="인턴 경험"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv9" />
 
     <TextView
         android:id="@+id/tv11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="544dp"
-        android:text="[ 봉사활동 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="봉사활동"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv10" />
 
     <TextView
         android:id="@+id/tv12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="592dp"
-        android:text="[ 자격증 ] "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="자격증"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv11" />
 
     <TextView
         android:id="@+id/text11"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="544dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text10" />
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="123dp"
         android:layout_height="25dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="100dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.763"
@@ -195,99 +213,99 @@
         android:id="@+id/text3"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="8dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
 
     <TextView
         android:id="@+id/text4"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text3" />
 
     <TextView
         android:id="@+id/text5"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text4" />
 
     <TextView
         android:id="@+id/text6"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text5" />
 
     <TextView
         android:id="@+id/text7"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text6" />
 
     <TextView
         android:id="@+id/text8"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text7" />
 
     <TextView
         android:id="@+id/text9"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="444dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text8" />
 
     <TextView
         android:id="@+id/text10"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="492dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text9" />
 
     <TextView
         android:id="@+id/text12"
         android:layout_width="86dp"
         android:layout_height="23dp"
-        android:layout_marginTop="592dp"
+        android:layout_marginTop="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

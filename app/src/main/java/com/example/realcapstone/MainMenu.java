@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,14 +16,21 @@ import org.w3c.dom.Text;
 
 public class MainMenu extends AppCompatActivity {
     //선언
-    Button mypagebtn;
-    Button comparebtn;
-    Button Interviewbtn;
+    ImageView mypagebtn;
+    ImageView comparebtn;
+    ImageView Interviewbtn;
+    ImageView inputspecbtn;
+    TextView i_text, i_info;
+    Animation atg, atgtwo, atgthree; //애니메이션
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        atg= AnimationUtils.loadAnimation(this,R.anim.atg); // 애니메이션
+        atgtwo= AnimationUtils.loadAnimation(this,R.anim.atgtwo);
+        atgthree= AnimationUtils.loadAnimation(this,R.anim.atgthree);
 
         //intent값 전달받기
         Intent intent = getIntent();
@@ -35,10 +45,17 @@ public class MainMenu extends AppCompatActivity {
         temp1.setText(message);
 
         //선언해주기
-        mypagebtn = (Button) findViewById(R.id.btn1);
-        comparebtn = (Button) findViewById(R.id.btn2);
-        Interviewbtn = (Button)findViewById(R.id.btn3);
+        mypagebtn = (ImageView) findViewById(R.id.ic_myinfo); //userinfobtn으로
+        comparebtn = (ImageView) findViewById(R.id.ic_apply);
+        Interviewbtn = (ImageView) findViewById(R.id.ic_interview);
+        inputspecbtn = (ImageView) findViewById(R.id.ic_spec);
+        i_text = (TextView) findViewById(R.id.interview_text);
+        i_info = (TextView) findViewById(R.id.interview_info);
 
+        // pass an animation
+        Interviewbtn.startAnimation(atg);
+        i_text.startAnimation(atg);
+        i_info.startAnimation(atg);
 
         mypagebtn.setOnClickListener(new View.OnClickListener() {
             @Override
