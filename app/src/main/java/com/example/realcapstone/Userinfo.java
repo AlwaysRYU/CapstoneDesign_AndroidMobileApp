@@ -41,7 +41,12 @@ public class Userinfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userinfo);
+//intent값 전달받기
 
+        Intent intent = getIntent();
+        //myData는 아이디 이다.
+        final String myData = intent.getStringExtra("loginID");
+        final String myName = intent.getStringExtra("loginName");
         mainbtn = (Button)findViewById(R.id.button2);
 
         mainbtn.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +55,10 @@ public class Userinfo extends AppCompatActivity {
 
 
                 Intent intent = new Intent(Userinfo.this, MainMenu.class);
-
+                intent.putExtra("loginID", myData);
+                //첫번째 인자는 STring타입의 키 / 두번째는 데이터
+                intent.putExtra("loginName",myName);
+                startActivity(intent);
                 startActivity(intent);
             }
         });
@@ -70,10 +78,7 @@ public class Userinfo extends AppCompatActivity {
         TextView k = (TextView) findViewById(R.id.text11);
         TextView l = (TextView) findViewById(R.id.text12);
 
-        //intent값 전달받기
-        Intent intent = getIntent();
-        //myData는 아이디 이다.
-        final String myData = intent.getStringExtra("loginID");
+
 
         databaseOpen(true);
 

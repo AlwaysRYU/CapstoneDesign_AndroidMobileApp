@@ -75,7 +75,8 @@ public class Interview extends AppCompatActivity {
 
 
         //문제설정
-        final int quest = r.nextInt(2) + 1;
+        final int quest = r.nextInt(3) + 1;
+
         //문제
         sql = "SELECT * FROM Interview WHERE id = " + quest +";";
         final Cursor C1 = db.rawQuery(sql,null);
@@ -238,7 +239,7 @@ public class Interview extends AppCompatActivity {
                     db.execSQL(sql2);
                     intent.putExtra("loginID", myData);
                     intent.putExtra("loginName", myName);
-                    intent.putExtra("quesetnumber", quest);
+                    intent.putExtra("questnumber", quest);
                     startActivity(intent);
                 }
 

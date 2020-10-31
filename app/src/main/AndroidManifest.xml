@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Interview_Fail"></activity>
+        <activity android:name=".InputEnterprise2"></activity>
+        <activity android:name=".InputEnterprise" />
+        <activity android:name=".Interview_Fail" />
         <activity android:name=".Interview_Pass" />
         <activity android:name=".Interview" />
         <activity android:name=".CompareMenu2" />
-        <activity android:name=".Enterinfo"></activity>
+        <activity android:name=".Enterinfo" />
         <activity android:name=".Userinfo" />
         <activity android:name=".Mypage" />
         <activity android:name=".InterviewMenu" />

@@ -64,7 +64,9 @@ public class Register extends AppCompatActivity {
                 }
                 else if (db != null){
                     //회원가입 완료
-                    db.execSQL("INSERT INTO User (Id, Password, Name) VALUES ('" + idt +"', '"+ pwt + "', '" + Namet + "');" );
+                    db.execSQL("INSERT" +
+                            " INTO User (Id, Password, Name) " +
+                            "VALUES ('" + idt +"', '"+ pwt + "', '" + Namet + "');" );
                     Toast toast = Toast.makeText(Register.this, "회원가입 완료!", Toast.LENGTH_SHORT);
                     toast.show();
 

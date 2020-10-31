@@ -22,6 +22,11 @@ public class MainMenu extends AppCompatActivity {
     ImageView inputspecbtn;
     TextView i_text, i_info;
     Animation atg, atgtwo, atgthree; //애니메이션
+//    Button mypagebtn;
+//    Button comparebtn;
+//    Button Interviewbtn;
+    Button Enterprisebtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +51,15 @@ public class MainMenu extends AppCompatActivity {
 
         //선언해주기
         mypagebtn = (ImageView) findViewById(R.id.ic_myinfo); //userinfobtn으로
-        comparebtn = (ImageView) findViewById(R.id.ic_apply);
-        Interviewbtn = (ImageView) findViewById(R.id.ic_interview);
-        inputspecbtn = (ImageView) findViewById(R.id.ic_spec);
+        comparebtn = (ImageView) findViewById(R.id.ic_apply); //기업 정보
+        Interviewbtn = (ImageView) findViewById(R.id.ic_interview); //모의 면접
+        inputspecbtn = (ImageView) findViewById(R.id.ic_spec); //스펙수정
         i_text = (TextView) findViewById(R.id.interview_text);
         i_info = (TextView) findViewById(R.id.interview_info);
+//        mypagebtn = (Button) findViewById(R.id.btn1);
+//        comparebtn = (Button) findViewById(R.id.btn2);
+//        Interviewbtn = (Button)findViewById(R.id.btn3);
+        Enterprisebtn = (Button)findViewById(R.id.btn4);
 
         // pass an animation
         Interviewbtn.startAnimation(atg);
@@ -61,7 +70,7 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //스펙 입력 버튼 클릭시
-                Intent intent = new Intent(MainMenu.this, Mypage.class);
+                Intent intent = new Intent(MainMenu.this, Userinfo.class);
                 intent.putExtra("loginID", myData);
                 intent.putExtra("loginName", myName); //유저의 이름
 
@@ -93,6 +102,33 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        inputspecbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, InputSpec.class);
+                intent.putExtra("loginID", myData);
+                intent.putExtra("loginName", myName); //유저의 이름
+
+                startActivity(intent);
+            }
+        });
+
+        //기업추가 데이터
+        Enterprisebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (myData.equals("gm")) {
+                    Intent intent = new Intent(MainMenu.this, InputEnterprise.class);
+                    intent.putExtra("loginID", myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    startActivity(intent);
+                } else {
+                    Toast toast = Toast.makeText(MainMenu.this, "관리자만 입력 할 수 있습니다.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
+            }
+        });
 
     }
 
