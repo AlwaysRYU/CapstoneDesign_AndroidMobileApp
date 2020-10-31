@@ -60,6 +60,7 @@ public class MainMenu extends AppCompatActivity {
 //        comparebtn = (Button) findViewById(R.id.btn2);
 //        Interviewbtn = (Button)findViewById(R.id.btn3);
         Enterprisebtn = (Button)findViewById(R.id.btn4);
+        Button logoutbtn = (Button)findViewById(R.id.logoutbtn); //로그아웃 버튼
 
         // pass an animation
         Interviewbtn.startAnimation(atg);
@@ -127,6 +128,16 @@ public class MainMenu extends AppCompatActivity {
                     toast.show();
                     return;
                 }
+            }
+        });
+
+        //로그아웃 버튼
+        logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //스펙 입력 버튼 클릭시
+                Intent intent = new Intent(MainMenu.this, Startpage.class);
+                startActivity(intent);
             }
         });
 
