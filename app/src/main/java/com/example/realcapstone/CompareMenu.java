@@ -32,6 +32,9 @@ public class CompareMenu extends AppCompatActivity {
     ImageView number7;
     ImageView number8;
     ImageView number9;
+    ImageView number10;
+    ImageView number11;
+    ImageView number12;
 
     //선언
     boolean pass = true; // 합격
@@ -50,6 +53,17 @@ public class CompareMenu extends AppCompatActivity {
 
         number1 = (ImageView) findViewById(R.id.number1);
         number2 = (ImageView) findViewById(R.id.number2);
+        number3 = (ImageView) findViewById(R.id.number3);
+        number4 = (ImageView) findViewById(R.id.number4);
+        number5 = (ImageView) findViewById(R.id.number5);
+        number6 = (ImageView) findViewById(R.id.number6);
+        number7 = (ImageView) findViewById(R.id.number7);
+        number8 = (ImageView) findViewById(R.id.number8);
+        number9 = (ImageView) findViewById(R.id.number9);
+        number10 = (ImageView) findViewById(R.id.number10);
+        number11 = (ImageView) findViewById(R.id.number11);
+        number12 = (ImageView) findViewById(R.id.number12);
+
 
 
 
@@ -95,8 +109,6 @@ public class CompareMenu extends AppCompatActivity {
                     intent.putExtra("Enterprise",1);
                     startActivity(intent);
                 }
-
-
             }
         });
 
@@ -134,16 +146,318 @@ public class CompareMenu extends AppCompatActivity {
                     intent.putExtra("Enterprise", 2);
                     startActivity(intent);
                 }
-
-
             }
         });
 
+        number3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
 
 
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
 
 
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
 
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
+
+
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
+
+
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
+
+
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
+
+
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
+
+
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseOpen(true);
+
+                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+
+                Cursor C1 = db.rawQuery(sql1,null);
+                Cursor C2 = db.rawQuery(sql2, null);
+                C1.moveToNext();
+                C2.moveToNext();
+
+                int userP = C1.getInt(0);
+                int EnterP = C2.getInt(0);
+
+
+                if (userP >= EnterP ) {
+                    //합격시
+                    Intent intent = new Intent(CompareMenu.this, Pass.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+
+                }else if (userP < EnterP) {
+                    //불합격시
+                    Intent intent = new Intent(CompareMenu.this, Fail.class);
+                    intent.putExtra("loginID",myData);
+                    intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("Enterprise", 2);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        number11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CompareMenu.this, CompareMenu5.class);
+                intent.putExtra("loginID", myData);
+                intent.putExtra("loginName", myName); //유저의 이름
+
+                startActivity(intent);
+            }
+        });
+
+        number12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CompareMenu.this, CompareMenu2.class);
+                intent.putExtra("loginID", myData);
+                intent.putExtra("loginName", myName); //유저의 이름
+
+                startActivity(intent);
+            }
+        });
 
 
 //        nextpage.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +478,7 @@ public class CompareMenu extends AppCompatActivity {
         if(f==false) {db = handler.getReadableDatabase();}
         else{db=handler.getWritableDatabase();}
     }
-    private class DatabaseHelper extends SQLiteOpenHelper {
+    class DatabaseHelper extends SQLiteOpenHelper {
         public DatabaseHelper(Context context) {
             super(context, databasename, null, dbversion);
         }

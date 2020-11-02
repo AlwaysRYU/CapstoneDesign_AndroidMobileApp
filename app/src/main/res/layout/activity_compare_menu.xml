@@ -24,9 +24,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/tvnb"
-                    android:text="채용"
+                    android:text="채용 - 공기업"
                     android:textColor="#FFFFFF"
                     android:textSize="40sp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
 
             </RelativeLayout>
 
@@ -39,7 +49,7 @@
                 android:rowCount="3">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="101dp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
@@ -58,14 +68,14 @@
                             android:id="@+id/number1"
                             android:layout_width="85dp"
                             android:layout_height="85dp"
-                            android:src="@drawable/logo1_train" />
+                            android:src="@drawable/logo1_h_well" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="국가철도공단"
+                            android:text="국가건강보험공단"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -93,14 +103,14 @@
                             android:layout_width="85dp"
                             android:layout_height="85dp"
                             android:id="@+id/number2"
-                            android:src="@drawable/logo2_hyundai" />
+                            android:src="@drawable/logo1_pension" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="현대자동차"
+                            android:text="국민연금공단"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -125,17 +135,17 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/number3"
                             android:layout_width="85dp"
                             android:layout_height="85dp"
-                            android:id="@+id/number3"
-                            android:src="@drawable/logo3_sktelecom" />
+                            android:src="@drawable/logo1_incheon" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="SK텔레콤"
+                            android:text="인천국제공항공사"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -163,14 +173,14 @@
                             android:layout_width="85dp"
                             android:layout_height="85dp"
                             android:id="@+id/number4"
-                            android:src="@drawable/logo4_netmarble" />
+                            android:src="@drawable/logo1_kogas" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="넷마블"
+                            android:text="한국가스공사"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -198,14 +208,14 @@
                             android:layout_width="85dp"
                             android:layout_height="85dp"
                             android:id="@+id/number5"
-                            android:src="@drawable/logo5_cj" />
+                            android:src="@drawable/logo1_airport" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="CJ"
+                            android:text="한국공항공사"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -234,14 +244,14 @@
                             android:layout_width="85dp"
                             android:layout_height="85dp"
                             android:id="@+id/number6"
-                            android:src="@drawable/logo6_lotte" />
+                            android:src="@drawable/logo1_expressway" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="롯데 케미칼"
+                            android:text="한국도로공사"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -269,14 +279,14 @@
                             android:layout_width="85dp"
                             android:layout_height="85dp"
                             android:id="@+id/number7"
-                            android:src="@drawable/logo7_kb" />
+                            android:src="@drawable/logo1_hydro" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="KB국민은행"
+                            android:text="한국수력원자력"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -304,14 +314,14 @@
                             android:layout_width="85dp"
                             android:layout_height="85dp"
                             android:id="@+id/number8"
-                            android:src="@drawable/logo8_ibk" />
+                            android:src="@drawable/logo1_kwater" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="기업은행"
+                            android:text="한국수자원공사"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -336,19 +346,106 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:id="@+id/number9"
                             android:layout_width="85dp"
                             android:layout_height="85dp"
-                            android:src="@drawable/logo9_samsung" />
+                            android:id="@+id/number9"
+                            android:src="@drawable/logo1_electric" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/scd2"
-                            android:text="삼성전자"
+                            android:text="한국전력공사"
                             android:textColor="#000000"
                             android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:id="@+id/number10"
+                            android:src="@drawable/logo1_lh" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/scd2"
+                            android:text="한국토지주택공사"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="117dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/number11"
+                            android:layout_width="86dp"
+                            android:layout_height="83dp"
+                            android:src="@drawable/arrow_prev" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="117dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/number12"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:src="@drawable/arrow_next" />
 
                     </LinearLayout>
 

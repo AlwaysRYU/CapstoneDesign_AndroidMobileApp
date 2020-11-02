@@ -6,7 +6,7 @@
     android:background="@drawable/bg_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CompareMenu2">
+    tools:context=".CompareMenu5">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/tvnb"
-                android:text="채용 - 전기/전자/기계/자동차"
+                android:text="채용 - 은행"
                 android:textColor="#FFFFFF"
                 android:textSize="40sp"/>
 
@@ -48,7 +48,7 @@
             android:rowCount="3">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -67,14 +67,14 @@
                         android:id="@+id/number1"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:src="@drawable/logo2_electro" />
+                        android:src="@drawable/logo5_bs" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="삼성전기"
+                        android:text="부산은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -102,14 +102,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number2"
-                        android:src="@drawable/logo2_hynix" />
+                        android:src="@drawable/logo5_sh" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="SK하이닉스"
+                        android:text="신한은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -137,14 +137,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number3"
-                        android:src="@drawable/logo2_samsung" />
+                        android:src="@drawable/logo5_woori" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="삼성전자"
+                        android:text="우리은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -172,14 +172,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number4"
-                        android:src="@drawable/logo2_lg" />
+                        android:src="@drawable/logo5_citi" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="LG전자"
+                        android:text="씨티은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -207,14 +207,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number5"
-                        android:src="@drawable/logo2_kumho" />
+                        android:src="@drawable/logo5_keb" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="금호타이어"
+                        android:text="한국외한은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -243,14 +243,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number6"
-                        android:src="@drawable/logo2_kia" />
+                        android:src="@drawable/logo5_korea" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="기아자동차"
+                        android:text="한국은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -278,14 +278,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number7"
-                        android:src="@drawable/logo2_hyundai" />
+                        android:src="@drawable/logo5_ibk" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="현대자동차"
+                        android:text="IBK기업은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -313,14 +313,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number8"
-                        android:src="@drawable/logo2_doosan" />
+                        android:src="@drawable/logo5_kb" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="두산중공업"
+                        android:text="KB국민은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -348,14 +348,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number9"
-                        android:src="@drawable/logo2_hyundai2" />
+                        android:src="@drawable/logo5_hana" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="현대중공업"
+                        android:text="KEB하나은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -383,14 +383,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number10"
-                        android:src="@drawable/logo2_samsung2" />
+                        android:src="@drawable/logo5_nh" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="삼성중공업"
+                        android:text="NH농협은행"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -449,6 +449,8 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+
 
         </GridLayout>
 

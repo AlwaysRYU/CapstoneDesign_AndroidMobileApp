@@ -14,7 +14,6 @@
         <activity android:name=".Interview_Fail" />
         <activity android:name=".Interview_Pass" />
         <activity android:name=".Interview" />
-        <activity android:name=".CompareMenu2" />
         <activity android:name=".Enterinfo" />
         <activity android:name=".Userinfo" />
         <activity android:name=".Mypage" />
@@ -24,6 +23,10 @@
         <activity android:name=".InputSpec2" />
         <activity android:name=".Comparing" />
         <activity android:name=".CompareMenu" />
+        <activity android:name=".CompareMenu2" />
+        <activity android:name=".CompareMenu3" />
+        <activity android:name=".CompareMenu4" />
+        <activity android:name=".CompareMenu5" />
         <activity android:name=".InputSpec" />
         <activity android:name=".Register" />
         <activity android:name=".MainMenu" />

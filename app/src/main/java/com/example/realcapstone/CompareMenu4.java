@@ -15,14 +15,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CompareMenu2 extends AppCompatActivity {
+public class CompareMenu4 extends AppCompatActivity {
 
-    //기본으로는
     String databasename = "capstone.db";
     String sql = "";
     int dbversion = 1;
     SQLiteDatabase db;
-    CompareMenu2.DatabaseHelper handler;
+    CompareMenu4.DatabaseHelper handler;
 
     ImageView number1;
     ImageView number2;
@@ -30,10 +29,6 @@ public class CompareMenu2 extends AppCompatActivity {
     ImageView number4;
     ImageView number5;
     ImageView number6;
-    ImageView number7;
-    ImageView number8;
-    ImageView number9;
-    ImageView number10;
     ImageView number11;
     ImageView number12;
 
@@ -58,14 +53,8 @@ public class CompareMenu2 extends AppCompatActivity {
         number4 = (ImageView) findViewById(R.id.number4);
         number5 = (ImageView) findViewById(R.id.number5);
         number6 = (ImageView) findViewById(R.id.number6);
-        number7 = (ImageView) findViewById(R.id.number7);
-        number8 = (ImageView) findViewById(R.id.number8);
-        number9 = (ImageView) findViewById(R.id.number9);
-        number10 = (ImageView) findViewById(R.id.number10);
         number11 = (ImageView) findViewById(R.id.number11);
         number12 = (ImageView) findViewById(R.id.number12);
-
-
 
 
         //intent에서 값 받아오기
@@ -73,8 +62,6 @@ public class CompareMenu2 extends AppCompatActivity {
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
         final String myName = intent.getStringExtra("loginName");
-
-
 
 
         number1.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +83,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 if (userP >= EnterP ) {
                     //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    Intent intent = new Intent(CompareMenu4.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 1);
@@ -104,7 +91,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 }else if (userP < EnterP) {
                     //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    Intent intent = new Intent(CompareMenu4.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise",1);
@@ -133,7 +120,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 if (userP >= EnterP ) {
                     //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    Intent intent = new Intent(CompareMenu4.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -141,7 +128,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 }else if (userP < EnterP) {
                     //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    Intent intent = new Intent(CompareMenu4.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -169,7 +156,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 if (userP >= EnterP ) {
                     //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    Intent intent = new Intent(CompareMenu4.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -177,7 +164,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 }else if (userP < EnterP) {
                     //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    Intent intent = new Intent(CompareMenu4.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -205,7 +192,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 if (userP >= EnterP ) {
                     //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    Intent intent = new Intent(CompareMenu4.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -213,7 +200,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 }else if (userP < EnterP) {
                     //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    Intent intent = new Intent(CompareMenu4.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -241,7 +228,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 if (userP >= EnterP ) {
                     //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    Intent intent = new Intent(CompareMenu4.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -249,7 +236,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 }else if (userP < EnterP) {
                     //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    Intent intent = new Intent(CompareMenu4.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -277,7 +264,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 if (userP >= EnterP ) {
                     //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    Intent intent = new Intent(CompareMenu4.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -285,151 +272,7 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 }else if (userP < EnterP) {
                     //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        number7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                databaseOpen(true);
-
-                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
-
-                Cursor C1 = db.rawQuery(sql1,null);
-                Cursor C2 = db.rawQuery(sql2, null);
-                C1.moveToNext();
-                C2.moveToNext();
-
-                int userP = C1.getInt(0);
-                int EnterP = C2.getInt(0);
-
-
-                if (userP >= EnterP ) {
-                    //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-
-                }else if (userP < EnterP) {
-                    //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        number8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                databaseOpen(true);
-
-                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
-
-                Cursor C1 = db.rawQuery(sql1,null);
-                Cursor C2 = db.rawQuery(sql2, null);
-                C1.moveToNext();
-                C2.moveToNext();
-
-                int userP = C1.getInt(0);
-                int EnterP = C2.getInt(0);
-
-
-                if (userP >= EnterP ) {
-                    //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-
-                }else if (userP < EnterP) {
-                    //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        number9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                databaseOpen(true);
-
-                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
-
-                Cursor C1 = db.rawQuery(sql1,null);
-                Cursor C2 = db.rawQuery(sql2, null);
-                C1.moveToNext();
-                C2.moveToNext();
-
-                int userP = C1.getInt(0);
-                int EnterP = C2.getInt(0);
-
-
-                if (userP >= EnterP ) {
-                    //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-
-                }else if (userP < EnterP) {
-                    //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-                }
-            }
-        });
-
-        number10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                databaseOpen(true);
-
-                String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
-
-                Cursor C1 = db.rawQuery(sql1,null);
-                Cursor C2 = db.rawQuery(sql2, null);
-                C1.moveToNext();
-                C2.moveToNext();
-
-                int userP = C1.getInt(0);
-                int EnterP = C2.getInt(0);
-
-
-                if (userP >= EnterP ) {
-                    //합격시
-                    Intent intent = new Intent(CompareMenu2.this, Pass.class);
-                    intent.putExtra("loginID",myData);
-                    intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
-                    startActivity(intent);
-
-                }else if (userP < EnterP) {
-                    //불합격시
-                    Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    Intent intent = new Intent(CompareMenu4.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 2);
@@ -441,7 +284,7 @@ public class CompareMenu2 extends AppCompatActivity {
         number11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CompareMenu2.this, CompareMenu.class);
+                Intent intent = new Intent(CompareMenu4.this, CompareMenu3.class);
                 intent.putExtra("loginID", myData);
                 intent.putExtra("loginName", myName); //유저의 이름
 
@@ -452,7 +295,7 @@ public class CompareMenu2 extends AppCompatActivity {
         number12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CompareMenu2.this, CompareMenu3.class);
+                Intent intent = new Intent(CompareMenu4.this, CompareMenu5.class);
                 intent.putExtra("loginID", myData);
                 intent.putExtra("loginName", myName); //유저의 이름
 
@@ -475,11 +318,11 @@ public class CompareMenu2 extends AppCompatActivity {
 
     //기본으로 해줘야할 것
     private void databaseOpen(boolean f){
-        handler = new CompareMenu2.DatabaseHelper(this);
+        handler = new CompareMenu4.DatabaseHelper(this);
         if(f==false) {db = handler.getReadableDatabase();}
         else{db=handler.getWritableDatabase();}
     }
-    private class DatabaseHelper extends SQLiteOpenHelper {
+    class DatabaseHelper extends SQLiteOpenHelper {
         public DatabaseHelper(Context context) {
             super(context, databasename, null, dbversion);
         }

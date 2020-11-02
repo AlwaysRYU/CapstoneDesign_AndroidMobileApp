@@ -6,7 +6,7 @@
     android:background="@drawable/bg_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CompareMenu2">
+    tools:context=".CompareMenu3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,9 +24,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/tvnb"
-                android:text="채용 - 전기/전자/기계/자동차"
+                android:text="채용 - 제철/화학/정유/에너지"
                 android:textColor="#FFFFFF"
                 android:textSize="40sp"/>
+
 
         </RelativeLayout>
 
@@ -67,14 +68,14 @@
                         android:id="@+id/number1"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:src="@drawable/logo2_electro" />
+                        android:src="@drawable/logo3_posco" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="삼성전기"
+                        android:text="포스코"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -102,14 +103,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number2"
-                        android:src="@drawable/logo2_hynix" />
+                        android:src="@drawable/logo3_hyundai" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="SK하이닉스"
+                        android:text="현대제철"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -137,14 +138,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number3"
-                        android:src="@drawable/logo2_samsung" />
+                        android:src="@drawable/logo3_gs" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="삼성전자"
+                        android:text="GS칼텍스"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -172,14 +173,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number4"
-                        android:src="@drawable/logo2_lg" />
+                        android:src="@drawable/logo3_lg" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="LG전자"
+                        android:text="LG화학"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -207,14 +208,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number5"
-                        android:src="@drawable/logo2_kumho" />
+                        android:src="@drawable/logo3_soil" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="금호타이어"
+                        android:text="S-OIL"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -243,154 +244,14 @@
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:id="@+id/number6"
-                        android:src="@drawable/logo2_kia" />
+                        android:src="@drawable/logo3_sk" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/scd2"
-                        android:text="기아자동차"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/number7"
-                        android:src="@drawable/logo2_hyundai" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/scd2"
-                        android:text="현대자동차"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/number8"
-                        android:src="@drawable/logo2_doosan" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/scd2"
-                        android:text="두산중공업"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/number9"
-                        android:src="@drawable/logo2_hyundai2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/scd2"
-                        android:text="현대중공업"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/number10"
-                        android:src="@drawable/logo2_samsung2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/scd2"
-                        android:text="삼성중공업"
+                        android:text="SK이노베이션"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -449,6 +310,8 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+
 
         </GridLayout>
 
