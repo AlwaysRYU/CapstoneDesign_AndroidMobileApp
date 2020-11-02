@@ -49,7 +49,7 @@ public class CompareMenu2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_compare_menu);
+        setContentView(R.layout.activity_compare_menu2);
 
 
         number1 = (ImageView) findViewById(R.id.number1);
@@ -83,7 +83,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 1;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 11;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -99,7 +99,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 1);
+                    intent.putExtra("Enterprise", 11);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -107,7 +107,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise",1);
+                    intent.putExtra("Enterprise",11);
                     startActivity(intent);
                 }
             }
@@ -120,7 +120,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 12;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -136,7 +136,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 12);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -144,7 +144,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 12);
                     startActivity(intent);
                 }
             }
@@ -156,7 +156,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 13;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -172,7 +172,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 13);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -180,7 +180,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 13);
                     startActivity(intent);
                 }
             }
@@ -192,7 +192,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 14;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -208,7 +208,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 14);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -216,7 +216,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 14);
                     startActivity(intent);
                 }
             }
@@ -228,7 +228,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 15;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -244,7 +244,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 15);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -252,7 +252,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 15);
                     startActivity(intent);
                 }
             }
@@ -264,7 +264,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 16;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -280,7 +280,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 16);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -288,7 +288,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 16);
                     startActivity(intent);
                 }
             }
@@ -300,7 +300,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 17;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -316,7 +316,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 17);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -324,7 +324,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 17);
                     startActivity(intent);
                 }
             }
@@ -336,7 +336,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 18;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -352,7 +352,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 18);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -360,7 +360,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 18);
                     startActivity(intent);
                 }
             }
@@ -372,7 +372,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 19;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -388,7 +388,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 19);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -396,7 +396,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 19);
                     startActivity(intent);
                 }
             }
@@ -408,7 +408,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 databaseOpen(true);
 
                 String sql1 = "SELECT Specscore FROM User WHERE Id = '" + myData + "';";
-                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 2;";
+                String sql2 = "SELECT cSpecscore FROM Enterprise WHERE cId = 20;";
 
                 Cursor C1 = db.rawQuery(sql1,null);
                 Cursor C2 = db.rawQuery(sql2, null);
@@ -424,7 +424,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 20);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -432,7 +432,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
-                    intent.putExtra("Enterprise", 2);
+                    intent.putExtra("Enterprise", 20);
                     startActivity(intent);
                 }
             }
