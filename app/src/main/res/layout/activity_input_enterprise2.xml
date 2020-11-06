@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".InputEnterprise2">
     <TextView
         android:id="@+id/inputspec2_tv2"
@@ -164,7 +165,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/bg_lgbutton_custom"
-        android:text="스펙입력완료"
+        android:text="정보입력완료"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"

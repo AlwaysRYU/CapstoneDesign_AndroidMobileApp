@@ -2,9 +2,21 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#03DAC5</color>
-    <color name="colorAccent">#03DAC5</color>
+
+    <color name="p1_accent">#ABEDD8</color>
+    <color name="p2_accent">#B0F4E6</color>
+
+    <color name="main_color">#03DAC5</color>
+    <color name="palette01">#E4F9E5</color>
+    <color name="palette02">#30E3CA</color>
+    <color name="palette03">#11999E</color>
+    <color name="palette04">#40514E</color>
+
+    <color name="yellow">#FFD31D</color>
     <color name="white">#FFFFFF</color>
     <color name="silver">#D5D5D5</color>
+    <color name="w_silver">#EEEEEE</color>
+
     <color name="color1">#424549</color>
     <color name="color2">#7e455e</color>
     <color name="color3">#796e25</color>

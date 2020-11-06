@@ -22,6 +22,8 @@
         android:layout_width="141dp"
         android:layout_height="48dp"
         android:text="한번 더!"
+        android:background="@drawable/yellow_button"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.149"
@@ -34,6 +36,8 @@
         android:layout_width="142dp"
         android:layout_height="51dp"
         android:text="메인메뉴로"
+        android:background="@drawable/bg_rgbutton_custom"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.81"
@@ -45,7 +49,10 @@
         android:id="@+id/tv8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="틀렸습니다!"
+        android:textSize="20sp"
+        android:fontFamily="@font/scd6"
+        android:textColor="#000000"
+        android:text="다시 생각해보세요!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,14 +61,20 @@
 
     <TextView
         android:id="@+id/tv9"
-        android:layout_width="309dp"
-        android:layout_height="101dp"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
         android:text="해설"
+        android:textColor="#000000"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.687" />
+        app:layout_constraintVertical_bias="0.619" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

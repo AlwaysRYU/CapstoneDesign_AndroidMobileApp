@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Interview">
 
     <TextView
         android:id="@+id/tv8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="인터뷰화면"
+        android:text="Q. 정답을 고르시오."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,9 +20,14 @@
 
     <TextView
         android:id="@+id/tv9"
-        android:layout_width="297dp"
-        android:layout_height="122dp"
+        android:layout_width="310dp"
+        android:layout_height="150dp"
         android:text="면접문제"
+        android:textSize="18dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,9 +36,11 @@
 
     <Button
         android:id="@+id/answer1"
-        android:layout_width="306dp"
+        android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="1번 보기"
+        android:background="@drawable/q_button"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -42,9 +50,11 @@
 
     <Button
         android:id="@+id/answer2"
-        android:layout_width="306dp"
+        android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="2번 보기"
+        android:background="@drawable/q_button"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -54,9 +64,11 @@
 
     <Button
         android:id="@+id/answer3"
-        android:layout_width="306dp"
+        android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="3번 보기"
+        android:background="@drawable/q_button"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -66,9 +78,11 @@
 
     <Button
         android:id="@+id/answer4"
-        android:layout_width="306dp"
+        android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="4번보기"
+        android:background="@drawable/q_button"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"

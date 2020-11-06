@@ -4,22 +4,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Startpage extends AppCompatActivity {
     //기본
     //선언
     Button Btn;
+    ImageView imageView;
+    AnimationDrawable anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startpage);
+
+        imageView = (ImageView)findViewById(R.id.imageView);
+        if(imageView == null) throw new AssertionError();
+        imageView.setBackgroundResource(R.drawable.animation_loading);
+        anim = (AnimationDrawable)imageView.getBackground();
+        anim.start();
+
 
         Btn = (Button)findViewById(R.id.startbutton);
 
