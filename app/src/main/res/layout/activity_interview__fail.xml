@@ -61,8 +61,8 @@
 
     <TextView
         android:id="@+id/tv9"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
+        android:layout_width="369dp"
+        android:layout_height="282dp"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"

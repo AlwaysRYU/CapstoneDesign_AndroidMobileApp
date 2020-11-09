@@ -57,7 +57,7 @@ public class Interview extends AppCompatActivity {
         final String myData = intent.getStringExtra("loginID");
         final String myName = intent.getStringExtra("loginName");
 
-        imsi.setText(myData);
+        //imsi.setText(myData);
 
 
         //랜덤 문 설정
@@ -75,7 +75,7 @@ public class Interview extends AppCompatActivity {
 
 
         //문제설정
-        final int quest = r.nextInt(3) + 1;
+        final int quest = r.nextInt(102) + 1;
 
         //문제
         sql = "SELECT * FROM Interview WHERE id = " + quest +";";

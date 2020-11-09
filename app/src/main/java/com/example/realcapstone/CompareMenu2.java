@@ -92,11 +92,24 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 11);
@@ -105,6 +118,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise",11);
@@ -129,12 +143,26 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if ((gap  < -300)) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
 
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 12);
                     startActivity(intent);
@@ -143,6 +171,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 12);
                     startActivity(intent);
@@ -165,12 +194,26 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
 
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 13);
                     startActivity(intent);
@@ -179,6 +222,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 13);
                     startActivity(intent);
@@ -201,12 +245,26 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
 
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 14);
                     startActivity(intent);
@@ -215,6 +273,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 14);
                     startActivity(intent);
@@ -237,7 +296,20 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
 
                 if (userP >= EnterP ) {
                     //합격시
@@ -245,6 +317,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 15);
+                    intent.putExtra("gapmessage", gapmessage);
                     startActivity(intent);
 
                 }else if (userP < EnterP) {
@@ -253,6 +326,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 15);
+                    intent.putExtra("gapmessage", gapmessage);
                     startActivity(intent);
                 }
             }
@@ -273,13 +347,26 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
-
+//차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("Enterprise", 16);
                     startActivity(intent);
 
@@ -289,6 +376,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 16);
+                    intent.putExtra("gapmessage", gapmessage);
                     startActivity(intent);
                 }
             }
@@ -309,13 +397,26 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("Enterprise", 17);
                     startActivity(intent);
 
@@ -323,6 +424,7 @@ public class CompareMenu2 extends AppCompatActivity {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 17);
                     startActivity(intent);
@@ -345,12 +447,26 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
 
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
                     intent.putExtra("loginID",myData);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 18);
                     startActivity(intent);
@@ -358,6 +474,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 18);
@@ -381,11 +498,25 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
 
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 19);
@@ -394,6 +525,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 19);
@@ -417,11 +549,25 @@ public class CompareMenu2 extends AppCompatActivity {
 
                 int userP = C1.getInt(0);
                 int EnterP = C2.getInt(0);
-
+                //차이
+                double gap = (userP - EnterP);
+                String gapmessage = "";
+                if(gap >= 500 ){
+                    gapmessage = "너무 월등합니다!";
+                } else if ((300 <= gap) && (gap < 500)){
+                    gapmessage = "우수한 인재 입니다..!!";
+                } else if (( 0<= gap) && (gap < 300)) {
+                    gapmessage = "우수합니다!";
+                } else if (( -300 <= gap) && (gap < 0)){
+                    gapmessage = "조금만 더 노력하면됩니다!";
+                } else if (gap  < -300) {
+                    gapmessage = "아직 많이 부족합니다...!!";
+                }
 
                 if (userP >= EnterP ) {
                     //합격시
                     Intent intent = new Intent(CompareMenu2.this, Pass.class);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 20);
@@ -430,6 +576,7 @@ public class CompareMenu2 extends AppCompatActivity {
                 }else if (userP < EnterP) {
                     //불합격시
                     Intent intent = new Intent(CompareMenu2.this, Fail.class);
+                    intent.putExtra("gapmessage", gapmessage);
                     intent.putExtra("loginID",myData);
                     intent.putExtra("loginName", myName); //유저의 이름
                     intent.putExtra("Enterprise", 20);

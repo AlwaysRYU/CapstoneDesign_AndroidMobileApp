@@ -11,17 +11,19 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.ImageView;
 
-import nl.dionsegijn.konfetti.KonfettiView;
-import nl.dionsegijn.konfetti.models.Shape;
-import nl.dionsegijn.konfetti.models.Size;
+//import nl.dionsegijn.konfetti.KonfettiView;
+//import nl.dionsegijn.konfetti.models.Shape;
+//import nl.dionsegijn.konfetti.models.Size;
 
 public class Pass extends AppCompatActivity {
 
     ImageView pass_konfetti;
     Button mainbtn;
     Button enterinfobtn;
+    TextView gap;
 
     Animation anipass;
 
@@ -56,12 +58,17 @@ public class Pass extends AppCompatActivity {
         mainbtn = (Button)findViewById(R.id.button2);
         //enterinfobtn = (Button)findViewById(R.id.button3);
         enterinfobtn = (Button)findViewById(R.id.specbtn);
+        gap = (TextView)findViewById(R.id.gap);
+
 
         Intent intent = getIntent();
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
         final String myName = intent.getStringExtra("loginName");
         final int enterprisenumber = intent.getExtras().getInt("Enterprise");
+        final String gapmessage = intent.getStringExtra("gapmessage");
+
+        gap.setText(gapmessage);
 
         pass_konfetti = (ImageView)findViewById(R.id.imageView1);
         pass_konfetti.startAnimation(anipass);
