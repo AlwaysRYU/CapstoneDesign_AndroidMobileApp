@@ -39,8 +39,7 @@
         android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="1번 보기"
-        android:background="@drawable/q_button"
-
+        android:background="@drawable/button_change"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -53,8 +52,7 @@
         android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="2번 보기"
-        android:background="@drawable/q_button"
-
+        android:background="@drawable/button_change"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -67,8 +65,7 @@
         android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="3번 보기"
-        android:background="@drawable/q_button"
-
+        android:background="@drawable/button_change"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -81,8 +78,7 @@
         android:layout_width="310dp"
         android:layout_height="52dp"
         android:text="4번보기"
-        android:background="@drawable/q_button"
-
+        android:background="@drawable/button_change"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"

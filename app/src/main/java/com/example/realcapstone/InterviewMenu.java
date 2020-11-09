@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -17,7 +19,8 @@ public class InterviewMenu extends AppCompatActivity {
     TextView no3;
     TextView yes;
     int score = 0;
-
+    TextView interview_text;
+    Animation anidown;
     Button startInterview;
 
 
@@ -31,6 +34,10 @@ public class InterviewMenu extends AppCompatActivity {
         //myData는 아이디 이다.
         final String myData = intent.getStringExtra("loginID");
         final String myName = intent.getStringExtra("loginName");
+
+        anidown= AnimationUtils.loadAnimation(this,R.anim.anidown);
+        interview_text = (TextView) findViewById(R.id.maintext);
+        interview_text.startAnimation(anidown);
 
 
         Button Interviewbtn = (Button)findViewById(R.id.interviewbtn);
